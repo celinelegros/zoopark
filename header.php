@@ -24,18 +24,19 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="<?php bloginfo('url'); ?>" class="brand-logo"><h1 class="brand"><?php bloginfo('name'); ?>/<em><?php bloginfo('description'); ?></em></h1></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#horaire">Horaires <span>été 2016</span></a></li>
-        <li><a href="mapzoo.html">Ou suis-je ? <span>plan du parc</span></a></li>
-        <li><a href="#">Les animaux </a></li>
-        <li><a href="contact.html">Contact <span>réservation</span></a></li>
-        <li><a href="#" class="material-icons">search</a><li>
+        <?php wp_nav_menu(array(
+            'container'         =>  '',
+            'theme_location'    =>  'main_nav',
+            'fallback_cb'       =>  false
+        )); ?>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#horaire">Horaires</a></li>
-        <li><a href="#">Ou suis-je ? </a></li>
-        <li><a href="#">Les animaux </a></li>
-        <li><a href="#">Infos pratiques </a></li>
+        <?php wp_nav_menu(array(
+            'container'         =>  '',
+            'theme_location'    =>  'main_nav',
+            'fallback_cb'       =>  false
+        )); ?>     
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
